@@ -169,7 +169,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    chooseAlg: (id) => dispatch(chooseAlg(parseInt(id))),
+    chooseAlg: (id) => dispatch(chooseAlg(parseInt(id))), 
     findPath: () => dispatch(findPath(false)),
     resetVisitedAndSPCells: () => dispatch(resetVisitedAndSP()),
     addWall: () => dispatch(addWalls()),

@@ -129,7 +129,7 @@ class PlayScreen extends Component {
     let t1 = new Date().getTime();
     findPath();   
     let t2 = new Date().getTime();
-    this.t = Number(t2-t1).toFixed(3); 
+    this.t = t2-t1; 
     this.props.timeSpents(this.t);
     if (!targetFound) {
       this.setState({endeGame: true});
@@ -199,7 +199,7 @@ class PlayScreen extends Component {
     let t1 = new Date().getTime();
     findPath();
     let t2 = new Date().getTime();
-    this.t = Number(t2-t1).toFixed(3);    
+    this.t = t2-t1;    
     this.props.timeSpents(this.t);
     if (!targetFound) {
       this.setState({endGame: true});
@@ -277,7 +277,7 @@ class PlayScreen extends Component {
     let t1 = new Date().getTime();    
     findPath();
     let t2 = new Date().getTime();
-    this.t = Number(t2-t1).toFixed(3);
+    this.t = t2-t1;
     this.props.timeSpents(this.t);
     if (!targetFound) {
       this.setState({endGame: true});
@@ -363,8 +363,10 @@ class PlayScreen extends Component {
     let t1 = new Date().getTime();    
     findPath();
     let t2 = new Date().getTime();
-    this.t = Number(t2-t1).toFixed(3);
+    // this.t = Number(t2-t1).toFixed(3);
+    this.t = t2 - t1;
     this.props.timeSpents(this.t);
+    console.log(this.t);
     
     if (!targetFound) {
       this.setState({endGame: true});
