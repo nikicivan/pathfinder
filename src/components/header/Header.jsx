@@ -24,25 +24,25 @@ class Header extends Component {
         this.saveLocalStorage(this.props.results);
     };
     
-    componentDidUpdate(prevProps) {
+    // componentDidUpdate(prevProps) {
 
-        const { results, levels, algorithms, currentAlg, setResults, numCV } = this.props;
+    //     const { results, levels, algorithms, currentAlg, setResults, numCV } = this.props;
 
-        if(prevProps.time === this.props.time) {
-            return null
-        }    
+    //     if(prevProps.results === this.props.results) {
+    //         return null
+    //     }    
 
-        setResults([...results, {      
-            id: shortId(),
-            name: algorithms[currentAlg].name,
-            timeFunc: this.props.time,
-            markVisited: numCV,                                        
-            timestamp: new Date().getTime(),
-            gameLevel: levels           
-        }],);
+    //     setResults([...results, {      
+    //         id: shortId(),
+    //         name: algorithms[currentAlg].name,
+    //         timeFunc: this.props.time,
+    //         markVisited: numCV,                                        
+    //         timestamp: new Date().getTime(),
+    //         gameLevel: levels           
+    //     }],);
         
-        this.saveLocalStorage(results);     
-    };
+    //     this.saveLocalStorage(results);     
+    // };
 
     saveLocalStorage = (results) => {
         localStorage.setItem('results', JSON.stringify(results));          
@@ -74,7 +74,11 @@ class Header extends Component {
             resetVisitedAndSPCells,
             findPath,  
             addWall,                   
-            removeLocalStorage,                     
+            removeLocalStorage,   
+            results, 
+            currentAlg,
+            numCV,
+            levels,                  
         } = this.props; 
         
         
@@ -110,7 +114,23 @@ class Header extends Component {
                                 findPath();  
                                 this.toggleLevels();  
                                 console.log(this.state.idx);                          
-                                this.props.settingLevels(this.state.idx);                                                 
+                                this.props.settingLevels(this.state.idx); 
+                                this.props.setResults([...results, {      
+                                    id: shortId(),
+                                    name: algorithms[currentAlg].name,
+                                    timeFunc: this.props.time,
+                                    markVisited: numCV,                                        
+                                    timestamp: new Date().getTime(),
+                                    gameLevel: levels           
+                                }]);  
+                                localStorage.setItem('results', JSON.stringify([...results, {      
+                                    id: shortId(),
+                                    name: algorithms[currentAlg].name,
+                                    timeFunc: this.props.time,
+                                    markVisited: numCV,                                        
+                                    timestamp: new Date().getTime(),
+                                    gameLevel: levels           
+                                }]));                                           
                             }}
                         >
                             Next Level 
