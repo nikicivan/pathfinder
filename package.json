@@ -1,6 +1,6 @@
 {
   "name": "pathfinding-styled-components",
-  "homepage": "https://nikicivan.github.io/pathfinding-visualizire",
+  "homepage": "https://nikicivan.github.io/pathfinder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
