@@ -28,18 +28,19 @@ class Header extends Component {
 
         const { results, levels, algorithms, currentAlg, setResults, numCV } = this.props;
 
-        if(prevProps.time === this.props.time && prevProps.numCV !== this.props.numCV) {
-
-            setResults([...results, {      
-                id: shortId(),
-                name: algorithms[currentAlg].name,
-                timeFunc: this.props.time,
-                markVisited: numCV,                                        
-                timestamp: new Date().getTime(),
-                gameLevel: levels           
-            }],);
-            this.saveLocalStorage(results);
+        if(prevProps.time === this.props.time && prevProps.numCV === this.props.numCV) {
+            return            
         }  
+
+        setResults([...results, {      
+            id: shortId(),
+            name: algorithms[currentAlg].name,
+            timeFunc: this.props.time,
+            markVisited: numCV,                                        
+            timestamp: new Date().getTime(),
+            gameLevel: levels           
+        }],);
+        this.saveLocalStorage(results);
         
         this.saveLocalStorage(results);
              
@@ -57,7 +58,7 @@ class Header extends Component {
 
     toggleLevels = () => {
         this.setState(prevState => ({
-            idx: prevState.idx ++
+            idx: prevState.idx + 1
         }))
     }
 
