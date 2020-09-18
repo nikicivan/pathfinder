@@ -28,8 +28,8 @@ class Header extends Component {
 
         const { results, levels, algorithms, currentAlg, setResults, numCV } = this.props;
 
-        if(prevProps.time !== this.props.time) {
-            
+        if(prevProps.time === this.props.time && prevProps.numCV !== this.props.numCV) {
+
             setResults([...results, {      
                 id: shortId(),
                 name: algorithms[currentAlg].name,
@@ -40,6 +40,7 @@ class Header extends Component {
             }],);
             this.saveLocalStorage(results);
         }  
+        
         this.saveLocalStorage(results);
              
     };
