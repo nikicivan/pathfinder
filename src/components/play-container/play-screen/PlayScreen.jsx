@@ -366,7 +366,6 @@ class PlayScreen extends Component {
     // this.t = Number(t2-t1).toFixed(3);
     this.t = t2 - t1;
     this.props.timeSpents(this.t);
-    console.log(this.t);
     
     if (!targetFound) {
       this.setState({endGame: true});

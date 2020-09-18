@@ -1,4 +1,4 @@
-Pathfinding Visualizer
+# Pathfinding Visualizer
 
 In the project directory, you can run:
 
@@ -12,3 +12,12 @@ You will also see any lint errors in the console.
 npm test
 Launches the test runner in the interactive watch mode.
 See the section about running tests for more information.
+
+# Algorithms implemented
+- Breadth First Search
+- Depth First Search
+- Dijkstra's Algorithm
+- A* alogithm
+
+# Live demo:
+https://nikicivan.github.io/pathfinder/

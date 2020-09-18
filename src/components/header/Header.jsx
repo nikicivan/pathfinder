@@ -111,7 +111,7 @@ class Header extends Component {
                                 resetVisitedAndSPCells();
                                 findPath();  
                                 this.toggleLevels();  
-                                console.log(this.state.idx);                          
+                                                         
                                 this.props.settingLevels(this.state.idx);                                                 
                             }}
                         >

@@ -19,7 +19,7 @@ const ResultScreen = ({results, level}) => {
             
     return (
         <ResultScreenContainer>
-            <ResultBoardTitle>Results / Data Board</ResultBoardTitle>
+            <ResultBoardTitle>Results / Data Board{" "}{"/"}{" "}<span>display changes only</span></ResultBoardTitle>
             <ResultBoard>                  
                 {results?.map((result) => (
                     <div key={result.id}>
