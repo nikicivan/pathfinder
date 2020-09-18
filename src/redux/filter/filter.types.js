@@ -1,0 +1,9 @@
+const FILTER_TYPES = {
+    CHOSE_ALGO: "CHOSE_ALGO",    
+    TIME_SPENT: "TIME_SPENT",
+    CELL_VISITED_NUMBER: "CELL_VISITED_NUMBER",
+    SET_LEVEL: "SET_LEVEL",
+    
+};
+
+export default FILTER_TYPES;
