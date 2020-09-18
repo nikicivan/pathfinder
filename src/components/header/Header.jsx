@@ -28,7 +28,7 @@ class Header extends Component {
 
         const { results, levels, algorithms, currentAlg, setResults, numCV } = this.props;
 
-        if(prevProps.time === this.props.time && prevProps.numCV !== this.props.numCV) {
+        if(prevProps.numCV === this.props.numCV) {
             return            
         }  
 
