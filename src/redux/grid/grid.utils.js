@@ -76,7 +76,7 @@ export const addWallsUtil = (state) => {
     for (let i = 0; i < gridCells.length; i++) {
         for (let j = 0; j < gridCells[i].length; j++) {                 
 
-            if (gridCells[i][j].isWall === false && gridCells[i][j].isPlayer === false && gridCells[i][j].isTarget === false) {               
+            if (gridCells[m][k].isWall === false && gridCells[m][k].isPlayer === false && gridCells[m][k].isTarget === false) {               
 
                 if (hashTable.includes(4,0) || hashTable.includes(4,9)) {
                     gridCells[m][k].isWall = false; 
