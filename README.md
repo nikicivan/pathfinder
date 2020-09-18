@@ -21,3 +21,5 @@ See the section about running tests for more information.
 
 # Live demo:
 https://nikicivan.github.io/pathfinder/
+
+# Auto play button starts after 4 sec
