@@ -64,7 +64,7 @@ class Header extends Component {
 
     toggleLevelsAutoPlay = () => {
         this.setState(prevState => ({
-            idy: prevState.idy ++
+            idy: prevState.idy + 1
         }))
     }
     
@@ -126,7 +126,7 @@ class Header extends Component {
                                     findPath();  
                                     this.toggleLevelsAutoPlay();                            
                                     this.props.settingLevels(this.state.idy);
-                                }, 5000)
+                                }, 4000)
 
                                 
                             }}
