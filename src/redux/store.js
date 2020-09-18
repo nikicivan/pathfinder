@@ -8,6 +8,6 @@ if (process.env.NODE_ENV === 'development') {
     middlewares.push(logger);
 }
 
-const store = createStore(rootReducer, );
+const store = createStore(rootReducer, applyMiddleware(...middlewares));
 
 export default store;

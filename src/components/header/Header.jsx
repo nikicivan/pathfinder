@@ -116,16 +116,16 @@ class Header extends Component {
                         </Button>
                         <Button style={{margin: '.5rem', width: '10rem'}} variant="contained" color="primary" disabled={!enableVisualizeButton}
                             onClick={() => {
-                                const interval = setInterval(() => {
+                                setInterval(() => {
                                     localStorage.removeItem('visited');                         
                                     addWall();
                                     resetVisitedAndSPCells();
                                     findPath();  
                                     this.toggleLevelsAutoPlay();                            
                                     this.props.settingLevels(this.state.idy);
-                                }, 7000)
+                                }, 5000)
 
-                                return () => clearInterval(interval);
+                                
                             }}
                         >
                             AUTO PLAY
