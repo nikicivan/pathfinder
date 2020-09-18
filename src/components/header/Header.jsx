@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { chooseAlg, setLevel } from '../../redux/filter/filter.actions';
 import { addWalls, findPath, resetVisitedAndSP } from '../../redux/grid/grid.actions';
@@ -24,25 +24,25 @@ class Header extends Component {
         this.saveLocalStorage(this.props.results);
     };
     
-    // componentDidUpdate(prevProps) {
+    componentDidUpdate(prevProps) {
 
-    //     const { results, levels, algorithms, currentAlg, setResults, numCV } = this.props;
+        const { results, levels, algorithms, currentAlg, setResults, numCV } = this.props;
 
-    //     if(prevProps.results === this.props.results) {
-    //         return null
-    //     }    
-
-    //     setResults([...results, {      
-    //         id: shortId(),
-    //         name: algorithms[currentAlg].name,
-    //         timeFunc: this.props.time,
-    //         markVisited: numCV,                                        
-    //         timestamp: new Date().getTime(),
-    //         gameLevel: levels           
-    //     }],);
-        
-    //     this.saveLocalStorage(results);     
-    // };
+        if(prevProps.time !== this.props.time) {
+            
+            setResults([...results, {      
+                id: shortId(),
+                name: algorithms[currentAlg].name,
+                timeFunc: this.props.time,
+                markVisited: numCV,                                        
+                timestamp: new Date().getTime(),
+                gameLevel: levels           
+            }],);
+            this.saveLocalStorage(results);
+        }  
+        this.saveLocalStorage(results);
+             
+    };
 
     saveLocalStorage = (results) => {
         localStorage.setItem('results', JSON.stringify(results));          
@@ -74,11 +74,7 @@ class Header extends Component {
             resetVisitedAndSPCells,
             findPath,  
             addWall,                   
-            removeLocalStorage,   
-            results, 
-            currentAlg,
-            numCV,
-            levels,                  
+            removeLocalStorage,                     
         } = this.props; 
         
         
@@ -114,23 +110,7 @@ class Header extends Component {
                                 findPath();  
                                 this.toggleLevels();  
                                 console.log(this.state.idx);                          
-                                this.props.settingLevels(this.state.idx); 
-                                this.props.setResults([...results, {      
-                                    id: shortId(),
-                                    name: algorithms[currentAlg].name,
-                                    timeFunc: this.props.time,
-                                    markVisited: numCV,                                        
-                                    timestamp: new Date().getTime(),
-                                    gameLevel: levels           
-                                }]);  
-                                localStorage.setItem('results', JSON.stringify([...results, {      
-                                    id: shortId(),
-                                    name: algorithms[currentAlg].name,
-                                    timeFunc: this.props.time,
-                                    markVisited: numCV,                                        
-                                    timestamp: new Date().getTime(),
-                                    gameLevel: levels           
-                                }]));                                           
+                                this.props.settingLevels(this.state.idx);                                                 
                             }}
                         >
                             Next Level 
