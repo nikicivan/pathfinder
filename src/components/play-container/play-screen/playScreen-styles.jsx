@@ -23,7 +23,7 @@ const PlayScreenContainerWidth = css`
     width: 50rem;
     @media (max-width: 768px) {
         width: auto;
-        height: auto;
+        height: 100%;
         margin: 15px;
     }
 `
