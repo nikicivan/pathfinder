@@ -26,9 +26,10 @@ export const ResultBoard = styled.div`
         cursor: pointer;
     }
     @media (max-width: 768px) {
-        display: flex;
-        justify-content: center;
+        display: flex;        
         width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
     }
     
 `;
@@ -38,8 +39,7 @@ export const ResultBoardTitle = styled.h3`
     @media (max-width: 768px) {
         font-size: medium;
     }  
-`
-
+`;
 export const ResultBoardLevel = styled.div`
     display: flex;     
     border-top-right-radius: 5px;  
@@ -51,7 +51,7 @@ export const ResultBoardLevel = styled.div`
     align-items: center;  
     font-weight: 700; 
     @media (max-width: 768px) {
-        width: 20rem;
+        width: 20rem;        
     }
 `;
 

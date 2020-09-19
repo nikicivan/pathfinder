@@ -21,14 +21,15 @@ export const PlayScreenInfo = styled.div`
 
 const PlayScreenContainerWidth = css`
     width: 50rem;
+    height: 50rem;    
     @media (max-width: 768px) {
         width: auto;
-        height: 100%;
+        height: auto;
         margin: 15px;
     }
 `
 
-export const PlayScreenGrid = styled.div`
+export const PlayScreenGrid = styled.div` 
     ${PlayScreenContainerWidth}   
 `;
 
@@ -36,11 +37,7 @@ export const PlayScreenTable = styled.table`
     display: flex;
     justify-content: center;    
     margin-bottom: 0;    
-    border: 5px solid white;
-    @media (max-width: 768px) {
-        width: auto;
-        height: auto;
-    }
+    border: 5px solid white;    
 `;
 
 

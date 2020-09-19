@@ -15,6 +15,7 @@ const GridCellContainer = css`
     background-size: contain;
     -moz-background-clip: padding-box;
     cursor: pointer;
+    
 `;
 
 export const GridCellFloor = styled.td`

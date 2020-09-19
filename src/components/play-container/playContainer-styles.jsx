@@ -6,7 +6,6 @@ export const PlayContainerDiv = styled.div`
     justify-content: center;
     @media (max-width: 768px) {
         display: grid;
-        place-items: center;
-        
+        place-items: center;        
     }
 `;
