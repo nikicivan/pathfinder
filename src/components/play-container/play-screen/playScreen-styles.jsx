@@ -15,13 +15,11 @@ export const PlayScreenLevel = styled.div`
 export const PlayScreenInfo = styled.div`
     font-size: medium;
     font-weight: 700; 
-    text-align: center;
-    
+    text-align: center;      
 `;
 
 const PlayScreenContainerWidth = css`
-    width: 50rem;
-    height: 50rem;    
+    width: 50rem;       
     @media (max-width: 768px) {
         width: auto;
         height: auto;
