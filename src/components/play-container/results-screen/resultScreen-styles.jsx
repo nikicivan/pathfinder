@@ -15,11 +15,10 @@ export const ResultScreenContainer = styled.div`
 export const ResultBoard = styled.div`
     background-color: white;        
     border-radius: 5px;
-    box-shadow: 10px 20px 20px 0 rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
+    box-shadow: 10px 20px 20px 0 rgba(0, 0, 0, 0.5);    
     width: 20rem;
     height: 30rem;   
-    overflow-y: scroll;  
+    overflow-y: overlay;  
     margin-top: 1rem;  
     justify-content: center;
     &:hover {
@@ -34,7 +33,7 @@ export const ResultBoard = styled.div`
     
 `;
 
-export const ResultBoardTitle = styled.h3`
+export const ResultBoardTitle = styled.h3` 
     text-align: start;  
     @media (max-width: 768px) {
         font-size: medium;
@@ -44,7 +43,10 @@ export const ResultBoardLevel = styled.div`
     display: flex;     
     border-top-right-radius: 5px;  
     border-top-left-radius: 5px; 
-    background-color: lightgrey;
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.5);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,36,217,1) 23%, rgba(0,212,255,1) 100%);
+    color: white;
     padding-left: 1rem;
     width: 100%;
     height: 2rem;
@@ -67,6 +69,7 @@ export const ResultBoardInfo = styled.div`
     padding-bottom: 1rem;
     padding-left: 2rem;
     font-weight: 700;
-    background-color: rgb(158, 252, 220);
-    opacity: 0.5;
+    background: rgb(34,193,195);
+    background: linear-gradient(156deg, rgba(34,193,195,1) 0%, rgba(197,66,252,1) 54%);
+    color: white;
 `;

@@ -25,7 +25,7 @@ const ResultScreen = ({results, level}) => {
                     <div key={result.id}>
                         <ResultBoardLevel className="board__level">
                             <ResultBoardArrow>{`Level ${result.gameLevel}`}</ResultBoardArrow>
-                            <ArrowDropDownIcon onClick={() => handleChange(result.id)}/>
+                            <ArrowDropDownIcon style={{marginRight:'.8rem', fontSize: '2rem', fontWeight: '700'}} onClick={() => handleChange(result.id)}/>
                         </ResultBoardLevel>
                         {isActive.includes(result.id) ? <ResultBoardInfo>
                             <p>{`Algorithm name: ${result.name}`}</p>

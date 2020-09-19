@@ -4,8 +4,7 @@ export const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-direction: row;
-    
+    flex-direction: row;    
     @media (max-width: 768px) {
         flex-direction: column;       
         padding-top: 1rem;
@@ -15,14 +14,12 @@ export const HeaderContainer = styled.div`
 export const HeaderTitle = styled.div`
     flex: 1;
     margin-left: 1rem;
-    align-items: center;
-    
+    align-items: center;    
 `;
 
 export const HeaderTitleH1 = styled.h1`
     @media (max-width: 768px) {
-        text-align: center;
-       
+        text-align: center;       
     }
 `
 
@@ -31,18 +28,19 @@ export const HeaderOptions = styled.div`
     margin: 2rem;
     align-items: center;
     @media (max-width: 768px) {
-        display: flex;
-        
+        display: flex;        
         flex-direction: column;
         justify-content: center;
         width: 90%
-    }
-    
+    }    
 `;
 
 export const HeaderSelect = styled.select`
     width: 10rem;
-    height: 2rem;
+    height: 2.4rem;
+    border: 5px solid blue;
+    outline-width: 0;
+    border-radius: 5px;
     font-family: 'Play', sans-serif;
     &:hover {
         cursor: pointer;        
@@ -52,8 +50,7 @@ export const HeaderSelect = styled.select`
 export const HeaderOption = styled.option`
     display: flex;
     margin: 1rem;
-    font-family: "Play", sans-serif;  
-    
+    font-family: "Play", sans-serif;      
 `;
 
 export const HeaderRight = styled.div`
@@ -64,8 +61,7 @@ export const HeaderRight = styled.div`
         cursor: pointer;
     }
     @media (max-width: 768px) {
-        flex-direction: column;
-        
+        flex-direction: column;        
     }
 `;
 

@@ -77,9 +77,7 @@ class Header extends Component {
             findPath,  
             addWall,                   
             removeLocalStorage,                     
-        } = this.props; 
-        
-        
+        } = this.props;         
         
         return (
             <HeaderContainer>

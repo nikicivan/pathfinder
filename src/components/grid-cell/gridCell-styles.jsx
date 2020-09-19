@@ -22,7 +22,6 @@ export const GridCellFloor = styled.td`
     ${GridCellContainer};
     background: url(${imgFloor});
     background-size: contain;
-
     &:hover {
         cursor: pointer;
     }

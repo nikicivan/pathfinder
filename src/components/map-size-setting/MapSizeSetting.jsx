@@ -15,18 +15,33 @@ const MapSizeSetting = () => {
 
     
     const handleMapSize = (e) => {
-        e.preventDefault();
-        dispatch(changeRows(row));
-        dispatch(changeColumns(column));
+        if (row >= 10) {
+            if (row <= 20) {
+                if (column >= 10) {
+                    if (column <= 20) {
+                        dispatch(changeRows(row));
+                        dispatch(changeColumns(column));
+                    } else {
+                        alert("Y value must be equal or less then 20");
+                    }
+                } else {
+                    alert("Y value must be equal or grather then 10");
+                }
+            } else {
+                alert("X value must be equal or less then 20");
+            }
+        } else {
+            alert("X value must be equal or grather then 10");
+        }        
     }
     
     return (
-        <MapSizeContainer>
-            <MapSizeInput min={10} onChange={(e) => setRow(e.target.value)} type="number" name="horizontal" placeholder="x value" max={20} required></MapSizeInput>
-            <MapSizeInput min={10} onChange={(e) => setColumn(e.target.value)} type="number" name="vertical" placeholder="y value" max={20} required></MapSizeInput>
+        <MapSizeContainer style={{marginRight: '1rem', marginTop: '1rem'}}>
+            <MapSizeInput onChange={(e) => setRow(e.target.value)} type="number" placeholder="x value" />
+            <MapSizeInput onChange={(e) => setColumn(e.target.value)} type="number" placeholder="y value" />
             <Button onClick={handleMapSize} variant="contained" color="primary">Change</Button>
         </MapSizeContainer>
     )
-}
+};
 
 export default MapSizeSetting;
