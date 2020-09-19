@@ -22,7 +22,7 @@ export const HeaderTitle = styled.div`
 export const HeaderTitleH1 = styled.h1`
     @media (max-width: 768px) {
         text-align: center;
-        margin-left: 6rem;
+       
     }
 `
 
@@ -32,7 +32,7 @@ export const HeaderOptions = styled.div`
     align-items: center;
     @media (max-width: 768px) {
         display: flex;
-        margin-left: 10rem;
+        
         flex-direction: column;
         justify-content: center;
         width: 90%
@@ -73,8 +73,7 @@ export const HeaderMapSize = styled.div`
     display: flex;
     flex-direction: column;
     @media (max-width: 768px) {
-        flex-direction: column;
-        
+        flex-direction: column;        
     }
 `;
 

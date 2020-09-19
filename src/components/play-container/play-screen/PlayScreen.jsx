@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { PlayScreenContainer, PlayScreenLevel, PlayScreenInfo, PlayScreenGrid, PlayScreenTable, PlayScreenLevelH3 } from './playScreen-styles';
+import { PlayScreenContainer, PlayScreenLevel, PlayScreenInfo, PlayScreenGrid, PlayScreenTable } from './playScreen-styles';
 
 import { connect } from 'react-redux';
 import GridCell from '../../grid-cell/GridCell';
@@ -482,7 +482,7 @@ class PlayScreen extends Component {
     return (
       <PlayScreenContainer>
         <PlayScreenLevel>
-          {endGame===false ? <PlayScreenLevelH3>{`Level ${level}`}</PlayScreenLevelH3> : <PlayScreenLevelH3>Game Over</PlayScreenLevelH3> }
+          {endGame===false ? <h3>{`Level ${level}`}</h3> : <h3>Game Over</h3> }
         </PlayScreenLevel>
         <PlayScreenGrid>
           <PlayScreenTable>

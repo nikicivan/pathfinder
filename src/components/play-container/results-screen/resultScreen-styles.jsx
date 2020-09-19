@@ -5,9 +5,7 @@ export const ResultScreenContainer = styled.div`
     flex-direction: column;  
     flex: 0.5;    
     padding-top: 2rem;
-    @media (max-width: 768px) {
-        justify-content: center;
-    }
+   
 `;
 
 export const ResultBoard = styled.div`
@@ -24,17 +22,15 @@ export const ResultBoard = styled.div`
         cursor: pointer;
     }
     @media (max-width: 768px) {
+        display: flex;
         justify-content: center;
-        margin-left: 10rem;
+        width: auto;
     }
+    
 `;
 
 export const ResultBoardTitle = styled.h3`
-    text-align: start;
-    @media (max-width: 768px) {
-        justify-content: center;
-        margin-left: 15rem;
-    }
+    text-align: start;    
 `
 
 export const ResultBoardLevel = styled.div`

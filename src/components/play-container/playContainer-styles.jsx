@@ -5,7 +5,8 @@ export const PlayContainerDiv = styled.div`
     flex-direction: row;
     justify-content: center;
     @media (max-width: 768px) {
-        flex-direction: column;
-        justify-content: center;
+        display: grid;
+        place-items: center;
+        
     }
 `;
