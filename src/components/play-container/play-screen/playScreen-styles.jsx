@@ -37,6 +37,10 @@ export const PlayScreenTable = styled.table`
     justify-content: center;    
     margin-bottom: 0;    
     border: 5px solid white;
+    @media (max-width: 768px) {
+        width: auto;
+        height: auto;
+    }
 `;
 
 
