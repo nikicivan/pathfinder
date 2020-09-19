@@ -5,6 +5,10 @@ export const ResultScreenContainer = styled.div`
     flex-direction: column;  
     flex: 0.5;    
     padding-top: 2rem;
+    @media (max-width: 768px) {
+        width: 20rem;
+        margin: 15px;
+    }
    
 `;
 
@@ -24,13 +28,16 @@ export const ResultBoard = styled.div`
     @media (max-width: 768px) {
         display: flex;
         justify-content: center;
-        width: auto;
+        width: 100%;
     }
     
 `;
 
 export const ResultBoardTitle = styled.h3`
-    text-align: start;    
+    text-align: start;  
+    @media (max-width: 768px) {
+        font-size: medium;
+    }  
 `
 
 export const ResultBoardLevel = styled.div`
@@ -43,10 +50,16 @@ export const ResultBoardLevel = styled.div`
     height: 2rem;
     align-items: center;  
     font-weight: 700; 
+    @media (max-width: 768px) {
+        width: 20rem;
+    }
 `;
 
 export const ResultBoardArrow = styled.p`
     flex: 1;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
 export const ResultBoardInfo = styled.div`
