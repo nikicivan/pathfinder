@@ -1,4 +1,3 @@
-import { CheckBoxOutlineBlank } from '@material-ui/icons';
 import shortId from 'shortid';
 
 export const createGridUtil = (state) => {
