@@ -348,7 +348,7 @@ class PlayScreen extends Component {
           localStorage.setItem('visited', JSON.stringify(his));
           // console.log("Broj posecenih: ", his.length);        
           
-          await this.wait(this.state.animationWait);
+          await this.wait(this.state.animationWait); 
         }
         head = head.next;
         

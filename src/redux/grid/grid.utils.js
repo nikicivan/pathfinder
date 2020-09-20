@@ -1,3 +1,4 @@
+import { CheckBoxOutlineBlank } from '@material-ui/icons';
 import shortId from 'shortid';
 
 export const createGridUtil = (state) => {
@@ -69,21 +70,19 @@ export const addWallsUtil = (state) => {
     const gridCells = [...state.gridCells];
 
     let m = Math.floor(Math.random() * 10);
-    let k = Math.floor(Math.random() * 10);
+    let k = Math.floor(Math.random() * 10);    
     let hashTable = [];
     hashTable.push(m, k);
-            
+         
     for (let i = 0; i < gridCells.length; i++) {
-        for (let j = 0; j < gridCells[i].length; j++) {                 
-
-            if (gridCells[m][k].isWall === false && gridCells[m][k].isPlayer === false && gridCells[m][k].isTarget === false) {               
-
+        for (let j = 0; j < gridCells[i].length; j++) {   
+            if (!gridCells[m][k].isWall && !gridCells[m][k].isPlayer && !gridCells[m][k].isTarget) { 
                 if (hashTable.includes(4,0) || hashTable.includes(4,9)) {
                     gridCells[m][k].isWall = false; 
                 } else {
                     gridCells[m][k].isWall = true;
                 }                                                                 
-            }      
+            }             
         }
     }    
     return gridCells;    

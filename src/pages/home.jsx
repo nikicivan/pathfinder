@@ -38,6 +38,7 @@ const Home = () =>  {
     const removeLocalStorage = () => {
         if(localStorage.getItem('results')) {
             localStorage.removeItem('results');
+            localStorage.removeItem('walls');
         }
     };
 

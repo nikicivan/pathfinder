@@ -95,12 +95,12 @@ class Header extends Component {
                         </HeaderSelect>  
                         <Button style={{margin: '.5rem', width: '10rem'}} disabled={!enableVisualizeButton} variant="contained" color="primary"
                             onClick={() => {  
-                                localStorage.removeItem('visited');                         
+                                localStorage.removeItem('visited');                                                       
                                 resetVisitedAndSPCells();
                                 findPath();                                                                                  
                             }}
                         >
-                            Play 
+                            Play
                         </Button>                
                         <Button style={{margin: '.5rem', width: '10rem'}} disabled={!enableVisualizeButton} variant="contained" color="primary"
                             onClick={() => {  
