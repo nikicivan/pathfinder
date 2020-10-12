@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HomeContainer = styled.div`
+const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
     @media (max-width: 768px) {
@@ -8,4 +8,6 @@ export const HomeContainer = styled.div`
         place-items: center;
         overflow-x: hidden;
     } 
-`
+`;
+
+export default HomeContainer;

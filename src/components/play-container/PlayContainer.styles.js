@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const PlayContainerDiv = styled.div`
+const PlayContainerDiv = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -9,3 +9,5 @@ export const PlayContainerDiv = styled.div`
         place-items: center;        
     }
 `;
+
+export default PlayContainerDiv;

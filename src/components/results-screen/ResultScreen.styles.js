@@ -3,13 +3,12 @@ import styled from 'styled-components';
 export const ResultScreenContainer = styled.div`
     display: flex;  
     flex-direction: column;  
-    flex: 0.5;    
-    padding-top: 2rem;
+    flex: 0.3;    
+    margin: 2rem;
     @media (max-width: 768px) {
         width: 20rem;
         margin: 15px;
-    }
-   
+    }   
 `;
 
 export const ResultBoard = styled.div`
@@ -29,12 +28,11 @@ export const ResultBoard = styled.div`
         width: 100%;
         flex-direction: column;
         justify-content: flex-start;
-    }
-    
+    }    
 `;
 
 export const ResultBoardTitle = styled.h3` 
-    text-align: start;  
+    text-align: center;  
     @media (max-width: 768px) {
         font-size: medium;
     }  
