@@ -1,6 +1,6 @@
 {
   "name": "000-pathfinding-v2",
-  "homepage": "https://nikicivan.github.io/pathfinding-v2",
+  "homepage": "https://nikicivan.github.io/pathfinder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
