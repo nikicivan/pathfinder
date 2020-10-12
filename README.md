@@ -1,25 +1,15 @@
-# Pathfinding Visualizer
+# Pathfinding Algorithms
 
-In the project directory, you can run:
-
-npm start
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-npm test
-Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.
+npm run runs the app in development mode. 
+After project git clone or fork first intall node_modules by npm install command. 
+After command npm start open http://localhost:3000 to view in the browser.
 
 # Algorithms implemented
 - Breadth First Search
-- Depth First Search
-- Dijkstra's Algorithm
-- A* alogithm
+- Dijkstra Algorithm
+- Astar Algorithm
 
-# Live demo:
-https://nikicivan.github.io/pathfinder/
+Note: Shorthest path animation works mutch better in production then on localhost.
 
-# Auto play button starts after 4 sec
+# LIVE DEMO (production)
+https://nikicivan.github.io/pathfinding-v2/
